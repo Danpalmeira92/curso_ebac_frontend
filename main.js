@@ -16,5 +16,5 @@ document.getElementById('form-valores').addEventListener('submit', function(even
     } else {
         errorMessage.style.display = 'block'; // Exibe mensagem de erro
     }
-});
+})
 
