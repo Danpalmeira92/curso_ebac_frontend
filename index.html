@@ -11,15 +11,19 @@
     <div class="container">
         <h1>Formulário de validação numérica</h1>
         <h2>Números</h2>
-        <form id="form-deposito">
-            <input type="text" id="nome-beneficiario" required placeholder="Nome completo do beneficiário" />
+        <form id="form-valores">
+            <label for="valor-A">Campo A</label>
+            <input type="number" id="valor-A" required placeholder="Insira um número" />
+            <label for="valor-B">Campo B</label>
+            <input type="number" id="valor-B" required placeholder="Insira um número" />
             <p class="error-message">
-                O nome precisa ser completo
+                Número B deve ser maior que o número A.
             </p>
-            <input type="number" id="numero-conta" required placeholder="Número da conta" />
-            <button id="btn-depositar" type="submit">Depositar</button>
+            <button id="btn-depositar" type="submit">Enviar</button>
         </form>
-        <p class="sucess-message"></p>
+        <p class="sucess-message">
+            Formulário válido: Número B é maior que o número A
+        </p>
     </div>
     <script src="./main.js"></script>
 </body>
