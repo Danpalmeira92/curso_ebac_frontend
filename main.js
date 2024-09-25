@@ -1,21 +1,20 @@
 document.getElementById('form-valores').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Impede o envio do formulário para validar primeiro
 
     const valorA = parseFloat(document.getElementById('valor-A').value);
     const valorB = parseFloat(document.getElementById('valor-B').value);
-    const errorMessages = document.querySelectorAll('.error-message');
+    const errorMessage = document.querySelector('.error-message');
     const successMessage = document.querySelector('.sucess-message');
 
-    errorMessages.forEach(msg => msg.style.display = 'none');
-    successMessage.textContent = '';
+    // Limpar mensagens anteriores
+    errorMessage.style.display = 'none';
+    successMessage.style.display = 'none'; // Esconde as mensagens antes de validar
 
+    // Validação
     if (valorB > valorA) {
-        successMessage.textContent = 'Formulário válido: Número B é maior que o número A!';
-        successMessage.style.color = 'white';
-        successMessage.style.display = 'block'
+        successMessage.style.display = 'block';  // Exibe mensagem de sucesso
     } else {
-        errorMessages.forEach(msg => msg.style.display = 'block');
-        errorMessages.textContent = 'Formulário inválido: Número B deve ser maior que o número A.';
-        errorMessages.style.color = 'red';
+        errorMessage.style.display = 'block'; // Exibe mensagem de erro
     }
 });
+

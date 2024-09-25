@@ -48,11 +48,10 @@ button:hover {
 }
 
 .error-message {
-    padding: 8px;
+    padding: 16px;
     background-color: red;
     color: #fff;
     margin-bottom: 8px;
-    font-size: 12px;
     display: none;
 }
 input.error {
